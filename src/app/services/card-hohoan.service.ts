@@ -7,7 +7,7 @@ export class CardHohoanService {
 
   private rotations : { [id : string] : number } = {};
 
-  hohoanChanges(id : string, deg : number) 
+  hohoanChanges(id : any, deg : number) 
   {
     const card = document.getElementById(id);
     
@@ -25,7 +25,7 @@ export class CardHohoanService {
       this.rotations[id] = 0;
     } else 
     {
-      this.rotations[id] += deg;
+      this.rotations[id] += (this.rotations[id] + deg) % 360; // if we don't use modulo, card will rotate to much
     }
 
     card.style.transitionDuration = '3s';

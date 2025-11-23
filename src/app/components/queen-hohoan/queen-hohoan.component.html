@@ -1,1 +1,37 @@
-<p>queen-hohoan works!</p>
+<mat-grid-list cols="3" rowHeight="150px">
+  <!-- Title -->
+  <mat-grid-tile>
+    <h4 [ngStyle]="
+    {
+        textAlign : 'center',
+        fontWeight : 'bold',
+        fontVariant : 'small-caps',
+        fontSize : '1.5em'
+    }"
+    [ngClass]="
+    {
+        'REDhohoan' : hohoanSuit === 'hearts' || hohoanSuit === 'diamonds',
+        'BLACKhohoan' : hohoanSuit === 'spades' || hohoanSuit === 'clubs'
+    }"
+    >{{ hohoanTitle }}</h4>
+  </mat-grid-tile>
+
+  <!-- Image -->
+  <mat-grid-tile>
+    <!-- Because src is dynamic (variable) while id could be static (literal string) -->
+    <img src="{{hohoanImage}}" [id]="hohoanSuit" /> 
+  </mat-grid-tile>
+
+  <!-- Rotate buttons -->
+  <mat-grid-tile>
+    <div [ngClass]="{'btn-container' : true}">
+      <button mat-stroked-button color="primary" (click)="hohoanRotates(hohoanSuit,hohoanDegree)">
+        Rotate {{ hohoanDegree }}
+      </button>
+
+      <button mat-stroked-button color="accent" (click)="hohoanRotates(hohoanSuit,hohoanZero)">
+        Reset To 0 Degrees
+      </button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

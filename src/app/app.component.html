@@ -1,3 +1,29 @@
 <app-header-hohoan [HFhohoan]="profileHohoan"></app-header-hohoan>
 
+<mat-toolbar [ngStyle]="{ justifyContent : 'space-around'}">
+
+    <!-- Ace Route -->
+    <a routerLink="/ace">
+        <button mat-raised-button color="accent">Ace</button>
+    </a>
+
+    <!-- King Route -->
+    <a routerLink="/king">
+        <button mat-raised-button color="accent">King</button>
+    </a>
+
+    <!-- Queen Route -->
+    <a routerLink="/queen">
+        <button mat-raised-button color="accent">Queen</button>
+    </a>
+
+    <!-- Jack Route -->
+    <a routerLink="/jack">
+        <button mat-raised-button color="accent">Jack</button>
+    </a>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
 <app-footer-hohoan [HFhohoan]="profileHohoan"></app-footer-hohoan>

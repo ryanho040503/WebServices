@@ -20,7 +20,7 @@ h3 {
     padding : 10px;
 }
 
-.REDhohoangduy {
+.REDhohoan {
   color: crimson;
   font-weight: bold;
   text-align: center;
@@ -28,10 +28,24 @@ h3 {
   font-size: 1.5em;
 }
 
-.BLACKhohoangduy {
+.BLACKhohoan {
   color: black;
   font-weight: bold;
   text-align: center;
   font-variant: small-caps;
   font-size: 1.5em;
+}
+
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;    
+  width: 100%;
+}
+
+.btn-container button {
+  width: 140px;
 }

@@ -1,0 +1,12 @@
+mat-grid-tile img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  overflow: visible !important;
+  transform-origin: center center;
+}
+
+:host {
+  display: block;
+  padding: 20px; 
+}
